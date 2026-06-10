@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="Hazardous Goods and Dangerous Parcel Awareness online course by MK Global SA. Professional training for South African courier drivers.">
+<meta name="theme-color" content="#1B3A5C">
+<title>Hazardous Goods Awareness | MK Global SA</title>
+
+<style>
+:root {
+  --mk-navy: #1B3A5C;
+  --mk-blue: #2E75B6;
+  --mk-gold: #C5972C;
+  --mk-amber: #F4B740;
+  --mk-amber-bg: #FFF8E7;
+  --mk-grey-50: #F7F8FA;
+  --mk-grey-100: #ECEEF2;
+  --mk-grey-200: #D8DCE3;
+  --mk-grey-400: #8B94A3;
+  --mk-grey-700: #3A4251;
+  --mk-text: #1A2330;
+  --mk-white: #FFFFFF;
+  --mk-success: #2E8B57;
+  --mk-success-bg: #E6F4EC;
+  --mk-error: #B22222;
+  --mk-error-bg: #FBEAE8;
+  --mk-red: #B22222;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(26,35,48,0.06);
+  --shadow-md: 0 4px 12px rgba(26,35,48,0.08);
+  --shadow-lg: 0 8px 24px rgba(26,35,48,0.12);
+  --font-body: Arial, Helvetica, sans-serif;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:0;font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--mk-text);background:var(--mk-grey-50);min-height:100vh;-webkit-font-smoothing:antialiased}
+.site-header{background:#000;color:var(--mk-white);padding:var(--space-3) var(--space-5);box-shadow:var(--shadow-md);position:sticky;top:0;z-index:50;border-bottom:2px solid var(--mk-gold)}
+.site-header__inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.brand{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;color:var(--mk-white)}
+.brand__logo{height:72px;width:auto;display:block;flex-shrink:0}
+@media(max-width:480px){.brand__logo{height:56px}}
+.brand__text{font-weight:bold;font-size:15px;line-height:1.3}
+.header-progress{font-size:13px;opacity:0.9;white-space:nowrap}
+.container{max-width:720px;margin:0 auto;padding:var(--space-5) var(--space-4)}
+.container--wide{max-width:960px}
+.view{display:none}
+.view.is-active{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--mk-white);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-md);border:1px solid var(--mk-grey-100)}
+.card+.card{margin-top:var(--space-5)}
+h1,h2,h3,h4{color:var(--mk-navy);line-height:1.25;margin:0 0 var(--space-4) 0}
+h1{font-size:26px;font-weight:bold}
+h2{font-size:21px;font-weight:bold;margin-top:var(--space-6)}
+h3{font-size:18px;font-weight:bold;margin-top:var(--space-5)}
+h4{font-size:16px;font-weight:bold}
+@media(min-width:640px){h1{font-size:32px}h2{font-size:24px}}
+p{margin:0 0 var(--space-4) 0}
+.lead{font-size:17px;color:var(--mk-grey-700)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;color:var(--mk-gold);margin-bottom:var(--space-3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);min-height:48px;padding:12px 24px;border-radius:var(--radius-md);font-family:inherit;font-size:16px;font-weight:bold;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all 0.15s ease;line-height:1.2;text-align:center}
+.btn:focus-visible{outline:3px solid var(--mk-amber);outline-offset:2px}
+.btn--primary{background:var(--mk-navy);color:var(--mk-white);border-color:var(--mk-navy)}
+.btn--primary:hover{background:#142c47;border-color:#142c47}
+.btn--primary:active{transform:translateY(1px)}
+.btn--gold{background:var(--mk-gold);color:var(--mk-navy);border-color:var(--mk-gold)}
+.btn--gold:hover{background:#b0861f;border-color:#b0861f}
+.btn--secondary{background:var(--mk-white);color:var(--mk-navy);border-color:var(--mk-navy)}
+.btn--secondary:hover{background:var(--mk-grey-50)}
+.btn--full{width:100%}
+.btn:disabled{opacity:0.45;cursor:not-allowed;transform:none}
+.field{margin-bottom:var(--space-5)}
+.field label{display:block;font-weight:bold;margin-bottom:var(--space-2);color:var(--mk-grey-700);font-size:15px}
+.field input,.field select,.field textarea{width:100%;min-height:48px;padding:12px 14px;border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:16px;color:var(--mk-text);background:var(--mk-white);transition:border-color 0.15s ease}
+.field textarea{min-height:80px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--mk-blue);box-shadow:0 0 0 3px rgba(46,117,182,0.15)}
+.field__hint{font-size:13px;color:var(--mk-grey-400);margin-top:var(--space-2)}
+.field--error input,.field--error select{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.field__error{display:none;font-size:13px;color:var(--mk-error);margin-top:var(--space-2);font-weight:bold}
+.field--error .field__error{display:block}
+.field__status{display:none;font-size:13px;color:var(--mk-grey-700);margin-top:var(--space-2)}
+.field__status.is-visible{display:block}
+.outcomes{list-style:none;padding:0;margin:0 0 var(--space-5) 0}
+.outcomes li{padding:var(--space-3) 0 var(--space-3) 36px;position:relative;border-bottom:1px solid var(--mk-grey-100);font-size:15px}
+.outcomes li:last-child{border-bottom:none}
+.outcomes li::before{content:"";position:absolute;left:0;top:16px;width:22px;height:22px;background:var(--mk-gold);border-radius:50%;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><polyline points='5 10 9 14 15 6' stroke='%231B3A5C' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-size:22px;background-repeat:no-repeat}
+.meta-row{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-5)}
+.meta-pill{background:var(--mk-grey-100);color:var(--mk-grey-700);padding:6px 14px;border-radius:100px;font-size:13px;font-weight:bold}
+.lesson-list{list-style:none;padding:0;margin:0}
+.lesson-list__item{background:var(--mk-white);border:1px solid var(--mk-grey-100);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-3);display:flex;align-items:center;gap:var(--space-4);box-shadow:var(--shadow-sm);transition:box-shadow 0.15s ease}
+.lesson-list__item--clickable{cursor:pointer}
+.lesson-list__item--clickable:hover{box-shadow:var(--shadow-md);border-color:var(--mk-blue)}
+.lesson-list__item--locked{opacity:0.55}
+.lesson-list__item--done{background:var(--mk-success-bg);border-color:var(--mk-success)}
+.lesson-num{width:40px;height:40px;border-radius:50%;background:var(--mk-navy);color:var(--mk-white);display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0}
+.lesson-list__item--done .lesson-num{background:var(--mk-success)}
+.lesson-list__item--locked .lesson-num{background:var(--mk-grey-400)}
+.lesson-info{flex:1;min-width:0}
+.lesson-info__title{font-weight:bold;color:var(--mk-navy);margin-bottom:2px;font-size:15px;line-height:1.3}
+.lesson-info__meta{font-size:13px;color:var(--mk-grey-400)}
+.lesson-status{font-size:13px;font-weight:bold;color:var(--mk-grey-400);flex-shrink:0;display:flex;align-items:center;gap:6px}
+.lesson-list__item--done .lesson-status{color:var(--mk-success)}
+.lesson-list__item--current{border-left:4px solid var(--mk-blue)}
+.lesson-list__item--current .lesson-status{color:var(--mk-blue)}
+.lock-icon{display:inline-block;width:14px;height:14px;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%238B94A3' d='M10 2a4 4 0 0 0-4 4v2H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-1V6a4 4 0 0 0-4-4zm-2 6V6a2 2 0 1 1 4 0v2H8z'/></svg>");background-size:contain;background-repeat:no-repeat}
+.assessment-card{background:var(--mk-white);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);padding:var(--space-5);margin-top:var(--space-5);display:flex;align-items:center;gap:var(--space-4);box-shadow:var(--shadow-sm);transition:all 0.15s ease}
+.assessment-card--locked{opacity:0.7}
+.assessment-card--unlocked{border-color:var(--mk-gold);background:#FAF0D8;cursor:pointer}
+.assessment-card--unlocked:hover{box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.assessment-card__badge{width:48px;height:48px;border-radius:50%;background:var(--mk-grey-400);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--mk-white);font-weight:bold;font-size:18px}
+.assessment-card--unlocked .assessment-card__badge{background:var(--mk-gold);color:var(--mk-navy)}
+.assessment-card__body{flex:1;min-width:0}
+.assessment-card__title{font-weight:bold;color:var(--mk-navy);font-size:16px;margin-bottom:2px}
+.assessment-card__meta{font-size:13px;color:var(--mk-grey-700)}
+.assessment-card__action{font-size:13px;font-weight:bold;color:var(--mk-grey-400);flex-shrink:0}
+.assessment-card--unlocked .assessment-card__action{color:var(--mk-navy)}
+.progress{margin:var(--space-4) 0 var(--space-5) 0}
+.progress__label{display:flex;justify-content:space-between;font-size:13px;font-weight:bold;color:var(--mk-grey-700);margin-bottom:6px}
+.progress__bar{width:100%;height:10px;background:var(--mk-grey-100);border-radius:100px;overflow:hidden}
+.progress__fill{height:100%;background:var(--mk-gold);border-radius:100px;width:0%;transition:width 0.3s ease}
+.progress__fill--complete{background:var(--mk-success)}
+.callout{border-left:4px solid var(--mk-blue);background:#EDF4FB;padding:var(--space-4);border-radius:var(--radius-sm);margin:var(--space-5) 0;font-size:15px}
+.callout--warning{border-left-color:var(--mk-amber);background:var(--mk-amber-bg)}
+.callout--gold{border-left-color:var(--mk-gold);background:#FAF0D8}
+.callout--success{border-left-color:var(--mk-success);background:var(--mk-success-bg)}
+.callout--do{border-left-color:var(--mk-success);background:var(--mk-success-bg)}
+.callout--dont{border-left-color:var(--mk-red);background:var(--mk-error-bg)}
+.callout__title{font-weight:bold;color:var(--mk-navy);margin-bottom:var(--space-2);display:block}
+.bullet-list{margin:0 0 var(--space-4) 0;padding-left:20px}
+.bullet-list li{margin-bottom:6px}
+.checklist{list-style:none;padding:0;margin:0 0 var(--space-4) 0}
+.checklist li{padding:var(--space-2) 0;display:flex;align-items:flex-start;gap:var(--space-3)}
+.checklist input[type="checkbox"]{width:22px;height:22px;accent-color:var(--mk-success);flex-shrink:0;margin-top:2px;cursor:pointer}
+.placeholder-box{background:var(--mk-grey-100);border:2px dashed var(--mk-grey-200);border-radius:var(--radius-md);padding:var(--space-5);text-align:center;color:var(--mk-grey-700);margin:var(--space-5) 0;font-size:14px}
+.placeholder-box strong{display:block;color:var(--mk-navy);margin-bottom:6px}
+.diagram-wrap{margin:var(--space-5) 0;border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--mk-grey-200)}
+.diagram-wrap img{width:100%;height:auto;display:block}
+.diagram-wrap__caption{background:var(--mk-navy);color:var(--mk-white);padding:var(--space-3) var(--space-4);font-size:13px;font-weight:bold;text-align:center}
+.site-footer{text-align:center;padding:var(--space-6) var(--space-4);color:var(--mk-grey-400);font-size:13px;margin-top:var(--space-7)}
+.text-center{text-align:center}
+.mt-5{margin-top:var(--space-5)}
+.spinner{display:inline-block;width:18px;height:18px;border:3px solid rgba(255,255,255,0.3);border-top-color:var(--mk-white);border-radius:50%;animation:spin 0.6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mcq-option{display:block;width:100%;text-align:left;padding:var(--space-4);margin-bottom:var(--space-2);background:var(--mk-white);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:15px;cursor:pointer;transition:all 0.15s ease}
+.mcq-option:hover{border-color:var(--mk-blue);background:#f0f6ff}
+.mcq-option--selected{border-color:var(--mk-blue);background:#e8f0fb}
+.mcq-option--correct{border-color:var(--mk-success);background:var(--mk-success-bg)}
+.mcq-option--incorrect{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.mcq-option:disabled{cursor:default;opacity:0.9}
+.sa-field{margin-bottom:var(--space-5)}
+.sa-field label{display:block;font-weight:bold;margin-bottom:var(--space-2);color:var(--mk-navy)}
+.sa-field textarea{width:100%;min-height:100px;padding:var(--space-3);border:2px solid var(--mk-grey-200);border-radius:var(--radius-md);font-family:inherit;font-size:15px;resize:vertical}
+.sa-field textarea:focus{outline:none;border-color:var(--mk-blue);box-shadow:0 0 0 3px rgba(46,117,182,0.15)}
+.sa-criteria{background:var(--mk-amber-bg);border-left:4px solid var(--mk-gold);padding:var(--space-4);border-radius:var(--radius-sm);margin-top:var(--space-3);font-size:14px;display:none}
+.result-box{text-align:center;padding:var(--space-6);background:var(--mk-white);border-radius:var(--radius-lg);border:2px solid var(--mk-grey-200);box-shadow:var(--shadow-md)}
+.result-box--pass{border-color:var(--mk-success);background:var(--mk-success-bg)}
+.result-box--fail{border-color:var(--mk-error);background:var(--mk-error-bg)}
+.result-score{font-size:48px;font-weight:bold;color:var(--mk-navy)}
+.kc-question{background:var(--mk-white);border:1px solid var(--mk-grey-200);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-4)}
+.kc-question__text{font-weight:bold;color:var(--mk-navy);margin-bottom:var(--space-3)}
+.action-plan-section{margin-bottom:var(--space-6)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#" onclick="event.preventDefault();if(state.learner){showView('view-dashboard');renderDashboard();}">
+      <img src="MK_LOGO.png" alt="MK Global" class="brand__logo" onerror="this.style.display='none'">
+      <div class="brand__text">MK Global SA<br><span style="font-size:12px;font-weight:normal;opacity:0.8">Courier Driver Training</span></div>
+    </a>
+    <div class="header-progress" id="headerProgress"></div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ACCESS GATE -->
+<div class="view is-active" id="view-access">
+  <div class="card text-center">
+    <span class="eyebrow">Restricted access</span>
+    <h1 id="gate-title">Hazardous Goods and Dangerous Parcel Awareness</h1>
+    <p class="lead">Stream 3 of the Courier Driver Training programme</p>
+    <div class="callout callout--warning"><span class="callout__title">Prerequisite</span>This stream builds on the Core Courier Driver Fundamentals (Stream 1). Please complete Stream 1 before starting this course.</div>
+    <p>Enter your access code to start. You should have received a code by email when you bought the course.</p>
+    <div class="field" id="codeField">
+      <label for="codeInput">Access code</label>
+      <input type="text" id="codeInput" autocomplete="off" autocapitalize="characters" placeholder="e.g. CDT-001" inputmode="text">
+      <div class="field__error" id="codeError">That code is not recognised. Check for spaces and try again.</div>
+      <div class="field__status" id="codeStatus"></div>
+    </div>
+    <button class="btn btn--primary btn--full" id="codeSubmit">Unlock Course</button>
+    <p class="field__hint text-center mt-5">Need a code? Buy the course at <a href="https://mkglobal.co.za" target="_blank" rel="noopener">mkglobal.co.za</a> or contact info@mkglobal.co.za.</p>
+  </div>
+</div>
+
+<!-- REGISTRATION -->
+<div class="view" id="view-registration">
+  <div class="card">
+    <span class="eyebrow">Almost there</span>
+    <h1>Tell us about yourself</h1>
+    <p>Your name will appear on your certificate if you pass the assessment.</p>
+    <form id="regForm" novalidate>
+      <div class="field" id="regNameField">
+        <label for="regName">Full name</label>
+        <input type="text" id="regName" placeholder="e.g. Sipho Dlamini" autocomplete="name" required>
+        <div class="field__error">Please enter your full name.</div>
+      </div>
+      <div class="field" id="regEmailField">
+        <label for="regEmail">Email address</label>
+        <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email" required>
+        <div class="field__error">Please enter a valid email address.</div>
+      </div>
+      <div class="field" id="regCompanyField">
+        <label for="regCompany">Company (optional)</label>
+        <input type="text" id="regCompany" placeholder="e.g. FastTrack Couriers">
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Start the Course</button>
+    </form>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="view" id="view-dashboard">
+  <div class="card">
+    <span class="eyebrow">Stream 3: Hazardous Goods Awareness</span>
+    <h1>Your Course Dashboard</h1>
+    <p id="dashGreeting"></p>
+    <div class="callout callout--warning"><span class="callout__title">Awareness programme only</span>This course builds awareness of hazardous goods. Completing it does not authorise you to transport dangerous goods. A valid dangerous goods driver certificate from an authorised body is required for that.</div>
+    <div class="progress">
+      <div class="progress__label"><span id="progressText">0 of 9 sessions complete</span><span id="progressPercent">0%</span></div>
+      <div class="progress__bar"><div class="progress__fill" id="progressFill" role="progressbar" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0"></div></div>
+    </div>
+    <h2 style="margin-top:var(--space-4)">Sessions</h2>
+    <ul class="lesson-list" id="lessonList"></ul>
+    <div class="assessment-card assessment-card--locked" id="assessmentCard">
+      <div class="assessment-card__badge" id="assessmentBadge">&#9734;</div>
+      <div class="assessment-card__body">
+        <div class="assessment-card__title">Final Assessment</div>
+        <div class="assessment-card__meta" id="assessmentMeta">15 questions, 80% pass mark. Complete all sessions to unlock.</div>
+      </div>
+      <div class="assessment-card__action" id="assessmentAction"><span class="lock-icon" aria-hidden="true"></span> Locked</div>
+    </div>
+    <div style="margin-top:var(--space-6);text-align:center">
+      <button class="btn btn--secondary" id="resetProgress" style="font-size:13px">Reset all progress</button>
+    </div>
+  </div>
+</div>
+
+<!-- SESSION VIEW -->
+<div class="view" id="view-lesson">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDash" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow" id="lessonEyebrow"></span>
+    <h1 id="lesson-title"></h1>
+    <div id="lessonBody"></div>
+  </div>
+</div>
+
+<!-- ASSESSMENT VIEW -->
+<div class="view" id="view-assessment">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDashFromAss" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow">Final Assessment</span>
+    <h1>Hazardous Goods Awareness</h1>
+    <div id="ass-intro">
+      <p class="lead">This assessment has 15 questions: 10 multiple choice and 5 short answer. You need 80% to pass and earn your Training Attended certificate.</p>
+      <div class="callout callout--warning"><span class="callout__title">Reminder</span>Passing this assessment confirms your awareness of hazardous goods. It does not authorise you to transport dangerous goods.</div>
+      <div class="meta-row">
+        <span class="meta-pill">15 questions</span>
+        <span class="meta-pill">80% pass mark</span>
+        <span class="meta-pill">10 MCQ + 5 short answer</span>
+      </div>
+      <button class="btn btn--gold btn--full" id="startAssBtn">Begin Assessment</button>
+    </div>
+    <div id="ass-running" style="display:none"></div>
+    <div id="ass-result" style="display:none"></div>
+  </div>
+</div>
+
+<!-- ACTION PLAN VIEW -->
+<div class="view" id="view-actionplan">
+  <div class="card">
+    <button class="btn btn--secondary" id="backToDashFromAP" style="margin-bottom:var(--space-4)">&larr; Back to Dashboard</button>
+    <span class="eyebrow">Your Action Plan</span>
+    <h1>Putting Your Training Into Practice</h1>
+    <p class="lead">This Action Plan turns your awareness into daily habits. The goal is simple: recognise dangerous goods, stay safe, and know your limits.</p>
+    <div id="actionPlanBody"></div>
+  </div>
+</div>
+
+<!-- CERTIFICATE VIEW -->
+<div class="view" id="view-certificate">
+  <div class="card text-center">
+    <span class="eyebrow">Congratulations</span>
+    <h1>You passed!</h1>
+    <p id="certMessage"></p>
+    <div id="certPreview" style="margin:var(--space-5) 0;padding:var(--space-6);border:2px solid var(--mk-gold);border-radius:var(--radius-lg);background:var(--mk-white)">
+      <p style="font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--mk-grey-400);margin-bottom:var(--space-3)">MK Global SA (Pty) Ltd</p>
+      <h2 style="color:var(--mk-navy);margin-top:0">Certificate of Training Attended</h2>
+      <p style="font-size:15px;color:var(--mk-grey-700)">This certifies that</p>
+      <p style="font-size:24px;font-weight:bold;color:var(--mk-navy)" id="certName"></p>
+      <p style="font-size:15px;color:var(--mk-grey-700)">has completed the</p>
+      <p style="font-size:18px;font-weight:bold;color:var(--mk-blue)">Hazardous Goods and Dangerous Parcel Awareness</p>
+      <p style="font-size:15px;color:var(--mk-grey-700)">of the Courier Driver Training programme.</p>
+      <p style="font-size:13px;color:var(--mk-grey-400);margin-top:var(--space-5)">Date: <span id="certDate"></span> | Ref: <span id="certRef"></span></p>
+      <p style="font-size:11px;color:var(--mk-grey-400);margin-top:var(--space-3)">This certificate confirms attendance of a hazardous goods awareness programme. It does not authorise the holder to transport dangerous goods. A valid dangerous goods driver certificate from an authorised body is required for that purpose. This is not a formal SAQA qualification.</p>
+    </div>
+    <button class="btn btn--gold btn--full" id="downloadCert">Download Certificate (PDF)</button>
+    <p class="field__hint mt-5" id="emailStatus"></p>
+    <button class="btn btn--secondary btn--full mt-5" id="backToDashFromCert">&larr; Back to Dashboard</button>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 MK Global SA (Pty) Ltd. All rights reserved.<br>info@mkglobal.co.za</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+"use strict";
+
+const FALLBACK_ACCESS_CODE = "CDT-2026";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzzg2UGRYHqONpt-_X3f8YuJYdGj_mnbtu_HSicYBQLm9pjTequM9kmkkvfQRRVGQRS/exec";
+const COURSE_KEY = "courier-hazmat";
+const APPS_SCRIPT_TIMEOUT_MS = 6000;
+
+const EMAILJS_CONFIG = {
+  enabled: false,
+  serviceId: "",
+  templateId: "",
+  publicKey: ""
+};
+
+const SESSIONS = [
+  { id: 1, title: "What Are Dangerous Goods?",          minutes: 12 },
+  { id: 2, title: "The Nine Hazard Classes",             minutes: 15 },
+  { id: 3, title: "Reading Markings",                    minutes: 12 },
+  { id: 4, title: "Packaging",                           minutes: 12 },
+  { id: 5, title: "Loading and Keeping Goods Apart",     minutes: 12 },
+  { id: 6, title: "Documents",                           minutes: 12 },
+  { id: 7, title: "If Something Goes Wrong",             minutes: 15 },
+  { id: 8, title: "The Law and Your Limits",             minutes: 12 },
+  { id: 9, title: "Knowing When to Say No",              minutes: 12 }
+];
+
+/* ============================================================
+   SESSION CONTENT
+   Sourced from MK Global Hazardous Goods and Dangerous Parcel
+   Awareness Learner Workbook and Facilitator Guide.
+   ============================================================ */
+const SESSION_CONTENT = {
+1: {
+  intro: "Dangerous goods are substances that can harm people, property, or the environment if they are not handled correctly while being moved. They are not always obvious. Everyday items can be dangerous goods, and a courier driver can be handed them without realising the risk.",
+  outcomes: [
+    "Define dangerous goods in plain terms.",
+    "Explain why they pose a risk in transport.",
+    "Understand why recognition matters even for drivers who do not carry them."
+  ],
+  sections: [
+    { h: "What counts as dangerous goods?", body: "<p>Dangerous goods include many everyday items you might not expect:</p><ul class='bullet-list'><li>Aerosols and gas cylinders</li><li>Batteries, including laptop and phone batteries</li><li>Cleaning chemicals and pool chemicals</li><li>Paint, petrol, and other flammable liquids</li><li>Fireworks and other explosives</li></ul><p>They are regulated because an accident involving them can be far worse than an ordinary one: a fire, a toxic release, an explosion, or a chemical spill.</p>" },
+    { h: "Why this matters for you", body: "<p>South African law, through the National Road Traffic Act 93 of 1996 and the SANS standards, sets strict rules for how dangerous goods are classified, packaged, marked, loaded, and carried. Even if you are not a dangerous goods carrier, you need to recognise them so you can protect yourself and others.</p><div class='callout callout--warning'><span class='callout__title'>This is an awareness course</span>This whole stream is about recognising danger and knowing your limits. It does not make you a dangerous goods carrier. Transporting dangerous goods requires a separate valid certificate from an authorised body.</div>" }
+  ],
+  notes: "Write down three everyday items that could be dangerous goods:",
+  takeaway: "Dangerous goods are more common than people think. Recognition is your first line of defence, even if you never carry them yourself."
+},
+2: {
+  intro: "All dangerous goods are sorted into nine classes under SANS 10228. Each class has a diamond-shaped sign with a colour, a symbol, and a number. Learning to read these is the core skill of this session.",
+  outcomes: [
+    "Name the nine hazard classes.",
+    "Recognise each class by its diamond colour and symbol.",
+    "Understand that the class tells you the type of danger."
+  ],
+  sections: [
+    { h: "The nine classes", body: "<div class='diagram-wrap'><img src='HZ_Diagram_1_NineHazardClasses.png' alt='The nine hazard classes under SANS 10228, each shown as a coloured diamond: Class 1 Explosives, Class 2 Gases, Class 3 Flammable Liquids, Class 4 Flammable Solids, Class 5 Oxidisers, Class 6 Toxic, Class 7 Radioactive, Class 8 Corrosives, Class 9 Miscellaneous.' loading='lazy'><div class='diagram-wrap__caption'>The Nine Hazard Classes under SANS 10228</div></div><ul class='bullet-list'><li><strong>Class 1:</strong> Explosives (fireworks, detonators)</li><li><strong>Class 2:</strong> Gases (aerosols, gas cylinders)</li><li><strong>Class 3:</strong> Flammable liquids (petrol, paint, solvents)</li><li><strong>Class 4:</strong> Flammable solids</li><li><strong>Class 5:</strong> Oxidising substances (some pool chemicals)</li><li><strong>Class 6:</strong> Toxic substances</li><li><strong>Class 7:</strong> Radioactive material</li><li><strong>Class 8:</strong> Corrosives (strong acids, some cleaning agents)</li><li><strong>Class 9:</strong> Miscellaneous dangerous goods (lithium batteries)</li></ul>" },
+    { h: "Read the colour first", body: "<p>You do not need to memorise every detail. Learn to read the colour of the diamond:</p><ul class='bullet-list'><li><strong>Orange</strong> means explosive (Class 1).</li><li><strong>Red</strong> means flammable (Classes 2 and 3).</li><li><strong>Yellow</strong> means oxidising or radioactive (Classes 5 and 7).</li><li><strong>White with a skull</strong> means toxic (Class 6).</li><li><strong>Black and white</strong> means corrosive (Class 8).</li></ul><p>When you see a hazard diamond, you know that item is a dangerous good. That alone is valuable knowledge.</p>" }
+  ],
+  notes: "",
+  takeaway: "Nine classes, nine diamonds. You do not need to be an expert, but you do need to recognise a hazard diamond when you see one and understand that it means danger."
+},
+3: {
+  intro: "Markings are a safety language. They tell everyone, from the driver to emergency responders, what danger is present. Reading them correctly can save lives.",
+  outcomes: [
+    "Read a hazard label on a package.",
+    "Understand how a dangerous goods vehicle is marked.",
+    "Recognise when markings do not match the load."
+  ],
+  sections: [
+    { h: "How a dangerous goods vehicle is marked", body: "<div class='diagram-wrap'><img src='HZ_Diagram_2_VehicleMarking.png' alt='A delivery vehicle showing hazard-class diamond placards on the sides and rear, with separate orange markings.' loading='lazy'><div class='diagram-wrap__caption'>Dangerous Goods Vehicle Marking</div></div><p>A dangerous goods vehicle shows its markings where they can be seen: on the sides and the rear. The markings include the hazard-class diamond and a separate orange marking.</p>" },
+    { h: "Markings must match the load", body: "<p>The marking must always match the goods actually being carried. It must be clean, undamaged, and removed or covered when the vehicle is not carrying those goods. A vehicle showing the wrong marking, or an old marking that no longer applies, is both dangerous and unlawful.</p><div class='callout'><span class='callout__title'>Why this matters</span>If something goes wrong and responders see the wrong marking, they will prepare for the wrong hazard. That mistake can cost lives.</div>" }
+  ],
+  notes: "In your own words, why must markings always match the load?",
+  takeaway: "Markings are not decoration. They are a safety system that tells responders what they are dealing with. Wrong markings are dangerous and unlawful."
+},
+4: {
+  intro: "Packaging is the first line of defence. Dangerous goods are only safe to move when they are inside packaging designed and tested for them. Damaged packaging removes that protection.",
+  outcomes: [
+    "Explain why correct packaging matters for dangerous goods.",
+    "Recognise signs of damaged or leaking packaging.",
+    "Know what to do when packaging is not sound."
+  ],
+  sections: [
+    { h: "Warning signs of unsound packaging", body: "<p>Dangerous goods packaging must meet the requirements of SANS 10229 and carry the correct markings showing it has been tested. You do not need to be a packaging expert, but you must spot when something is visibly wrong:</p><ul class='bullet-list'><li>A leak or a wet stain</li><li>A strong or strange smell</li><li>A dented drum or crushed box</li><li>A hissing sound from a canister</li><li>A torn label or a damaged seal</li></ul>" },
+    { h: "What to do", body: "<p>If you spot any of these signs, do not handle the package. Keep clear, do not breathe any fumes, and report it immediately. Never try to repair or repack a damaged dangerous goods package yourself.</p><div class='callout callout--dont'><span class='callout__title'>Never do this</span>Do not wipe up a leak, sniff to identify a substance, or carry a damaged package \"just to the back of the van.\" These actions can expose you to serious harm.</div>" }
+  ],
+  notes: "",
+  takeaway: "If the packaging is damaged, the protection is gone. Do not handle it. Keep clear and report it."
+},
+5: {
+  intro: "Some dangerous goods react violently with each other. Loading the wrong things together can cause a fire, an explosion, or a toxic reaction. This is why goods must be kept apart, which is called segregation.",
+  outcomes: [
+    "Explain why some goods must be kept apart.",
+    "Describe the principles of safe loading and securing.",
+    "Understand that segregation is a specialist task requiring proper authority."
+  ],
+  sections: [
+    { h: "The segregation principles", body: "<div class='diagram-wrap'><img src='HZ_Diagram_3_Segregation.png' alt='A worker in high-visibility vest and gloves carefully handling a parcel, demonstrating proper PPE and segregation awareness.' loading='lazy'><div class='diagram-wrap__caption'>Proper Handling and Segregation Awareness</div></div><p>Four principles govern segregation:</p><ul class='bullet-list'><li>Separate incompatible classes so they cannot react with each other.</li><li>Secure every item so it cannot move or tip during transport.</li><li>Check that packaging is sound and correctly marked under SANS 10229.</li><li>Never mix dangerous goods with food, animal feed, or passengers.</li></ul>" },
+    { h: "This is not your job (unless you are certified)", body: "<p>Actual dangerous goods segregation is a specialist responsibility carried out by trained, authorised people. An ordinary courier driver should never be improvising this.</p><div class='callout callout--warning'><span class='callout__title'>Know your limits</span>If someone asks you to load goods that need segregation and you are not a certified dangerous goods driver, refuse and report it. You are not being difficult. You are following the law.</div>" }
+  ],
+  notes: "",
+  takeaway: "Segregation exists to prevent dangerous reactions. It is a specialist task. If you are not certified, do not attempt it."
+},
+6: {
+  intro: "Dangerous goods must travel with documents that say what the goods are, their class, and the emergency information needed if something goes wrong. This is part of the emergency information system under SANS 10232.",
+  outcomes: [
+    "Explain what transport documents for dangerous goods contain.",
+    "Understand why emergency information must travel with the load.",
+    "Recognise when documents are missing or do not match the goods."
+  ],
+  sections: [
+    { h: "What the documents tell you", body: "<p>Transport documents for dangerous goods identify:</p><ul class='bullet-list'><li>What the goods are (the proper shipping name).</li><li>Their hazard class and UN number.</li><li>The quantity being carried.</li><li>Emergency information: what to do if there is a spill, fire, or exposure.</li></ul><p>Without these documents, responders arriving at an incident would not know what they are dealing with. That delay can be the difference between a controlled response and a disaster.</p>" },
+    { h: "The emergency information system", body: "<p>SANS 10232 requires that emergency information travels with dangerous goods at all times. This is not optional paperwork. It is a safety system designed to protect everyone on the road.</p><div class='callout callout--gold'><span class='callout__title'>Think of it this way</span>The documents are the voice of the load when the driver cannot speak. If you are injured or not at the scene, the documents tell responders exactly what they need to know.</div>" }
+  ],
+  notes: "In your own words, what are dangerous goods documents for?",
+  takeaway: "Documents are not admin. They are a safety system. Without them, responders are working blind."
+},
+7: {
+  intro: "In a dangerous goods incident, the worst thing you can do is rush in to save the load. This session is about staying alive and helping others stay safe.",
+  outcomes: [
+    "Follow the correct order of actions in a dangerous goods incident.",
+    "Understand that personal safety comes before the load.",
+    "Know how to give responders the information they need."
+  ],
+  sections: [
+    { h: "The order of actions", body: "<div class='diagram-wrap'><img src='HZ_Diagram_4_EmergencyResponse.png' alt='Emergency response flow: Step 1 Immediate Scene Actions, Step 2 Communication, Step 3 Documentation, Step 4 Reporting.' loading='lazy'><div class='diagram-wrap__caption'>Emergency Response Flow for Dangerous Goods Incidents</div></div><p>The order matters. Follow these steps:</p><p><strong>1. Keep yourself safe first.</strong> Move away from the danger. Do not breathe fumes or touch spilled material.</p><p><strong>2. Warn others and keep them back.</strong> Stop people from approaching.</p><p><strong>3. Call emergency services on 112 or 10111.</strong> Tell them it involves dangerous goods and read the class from the documents.</p><p><strong>4. Make the transport documents available to responders.</strong></p><p><strong>5. Do not take risks to save the load.</strong> Never fight a fire or clean a spill beyond your training.</p>" },
+    { h: "The key principle", body: "<div class='callout callout--dont'><span class='callout__title'>Never do this</span>Do not rush in to save parcels, equipment, or cargo. Do not try to fight a chemical fire with a normal extinguisher. Do not attempt to clean a spill of unknown material. Your life is worth more than any load.</div><div class='callout callout--success'><span class='callout__title'>People before property</span>Keep yourself safe, warn others, call for help, hand over the documents. That is your job in an incident. Everything else is for trained responders.</div>" }
+  ],
+  notes: "",
+  takeaway: "People first, property second. Keep safe, warn others, call for help, hand over the documents. That order matters."
+},
+8: {
+  intro: "This is the most important session in this course for protecting you. Completing this awareness course does not allow you to transport dangerous goods.",
+  outcomes: [
+    "State that transporting dangerous goods requires a valid certificate from an authorised body.",
+    "Describe the driver's general legal duties.",
+    "Understand the consequences of carrying dangerous goods unlawfully."
+  ],
+  sections: [
+    { h: "Who may transport dangerous goods?", body: "<p>Under South African law, transporting dangerous goods is tightly controlled. The requirements are:</p><ul class='bullet-list'><li>The driver must hold a valid dangerous goods driver certificate issued by an authorised body.</li><li>The vehicle must meet specific requirements.</li><li>The operator must be properly authorised.</li></ul><p>These requirements come from the National Road Traffic Act 93 of 1996, Chapter VIII, and the SANS standards. There are no shortcuts and no exceptions.</p><div class='callout callout--warning'><span class='callout__title'>This awareness course does not qualify you</span>Completing this programme gives you important awareness, but it does not give you a dangerous goods driver certificate. That requires a separate course and assessment through an authorised body.</div>" },
+    { h: "Your duties as a driver", body: "<p>Even as an awareness-trained driver, you have duties under the Occupational Health and Safety Act 85 of 1993 to work safely. That includes:</p><ul class='bullet-list'><li>Not handling goods you are not trained or authorised to handle.</li><li>Reporting unsafe conditions.</li><li>Refusing work that puts you or others at serious risk.</li></ul><p>Carrying dangerous goods without the proper certificate is not just against company policy. It is a criminal offence that can result in prosecution, fines, and imprisonment.</p>" }
+  ],
+  notes: "In your own words, who is allowed to transport dangerous goods?",
+  takeaway: "No valid dangerous goods certificate means no dangerous goods transport. This awareness course is valuable, but it is not that certificate. Know your limits."
+},
+9: {
+  intro: "This final session turns everything you have learned into one clear skill: spotting when something is not right and stopping it safely and professionally.",
+  outcomes: [
+    "Recognise the signs that a load may be dangerous goods.",
+    "Refuse an unlawful or unsafe load professionally.",
+    "Report the situation through the correct channel."
+  ],
+  sections: [
+    { h: "The warning signs", body: "<p>Watch for these signs that a parcel or load may be dangerous goods:</p><ul class='bullet-list'><li>Hazard diamonds or labels on a parcel.</li><li>An orange marking on a vehicle or package.</li><li>A strong or strange smell.</li><li>A leak or a stain.</li><li>A customer who is vague or evasive about what is inside.</li><li>A parcel that simply feels wrong (unusually heavy, warm, or making sounds).</li></ul><p>When these appear and you are not a certified dangerous goods carrier, the answer is to stop, not load, and report.</p>" },
+    { h: "How to refuse professionally", body: "<p>You are not being difficult. You are following the law and protecting everyone. Here is how to do it:</p><ul class='bullet-list'><li>Stay calm and professional.</li><li>Explain clearly that you are not permitted to carry dangerous goods.</li><li>Report it to your dispatcher or supervisor immediately.</li><li>Do not accept the load under any circumstances, regardless of pressure or extra payment.</li></ul><div class='callout callout--gold'><span class='callout__title'>A professional phrase you can use</span>\"I am not authorised to carry dangerous goods. I need to report this and let my company arrange the correct transport.\" This is clear, professional, and protects you.</div><div class='callout callout--dont'><span class='callout__title'>No payment changes the law</span>If a customer offers extra money to carry undeclared dangerous goods, the answer is always no. The fine, the risk, and the potential harm are never worth it.</div>" }
+  ],
+  notes: "",
+  takeaway: "Stop, do not load, report. That is the skill this whole course has been building towards. Use it every time, without exception."
+}
+};
+
+/* ============================================================
+   KNOWLEDGE CHECKS (formative, per session)
+   3 questions per session, must get all correct to complete session
+   ============================================================ */
+const KNOWLEDGE_CHECKS = {
+1: [
+  { q: "What are dangerous goods?", opts: ["Only explosives and petrol","Anything in a large box","Substances that can harm people, property, or the environment if mishandled in transport"], correct: 2 },
+  { q: "Which of these is an everyday item that could be a dangerous good?", opts: ["A cardboard box","An aerosol can","A cotton T-shirt"], correct: 1 },
+  { q: "Why does this course matter even if you do not carry dangerous goods?", opts: ["It replaces your driving licence","Because you might be handed them without realising the risk","It is only useful for long-distance drivers"], correct: 1 }
+],
+2: [
+  { q: "How many hazard classes are there under SANS 10228?", opts: ["Five","Seven","Nine"], correct: 2 },
+  { q: "What colour diamond means flammable?", opts: ["Orange","Red","Yellow"], correct: 1 },
+  { q: "What does an orange hazard diamond indicate?", opts: ["Corrosive","Explosive","Toxic"], correct: 1 }
+],
+3: [
+  { q: "A vehicle's hazard marking should:", opts: ["Stay on permanently, even when empty","Match the goods actually being carried","Be as small as possible to save space"], correct: 1 },
+  { q: "Where should hazard markings be visible on a vehicle?", opts: ["Only on the front","On the roof","On the sides and the rear"], correct: 2 },
+  { q: "What should happen to markings when the vehicle is no longer carrying dangerous goods?", opts: ["Leave them for the next load","Remove or cover them","Paint over them in white"], correct: 0 }
+],
+4: [
+  { q: "What is the first line of defence for dangerous goods?", opts: ["The driver's experience","Correct, tested packaging","A fire extinguisher"], correct: 1 },
+  { q: "Which of these is a warning sign of unsound packaging?", opts: ["A neatly sealed label","A leak or wet stain","A heavy parcel"], correct: 1 },
+  { q: "What should you do if packaging is damaged?", opts: ["Wipe it clean and carry on","Move it to the back of the van","Do not handle it; keep clear and report it"], correct: 2 }
+],
+5: [
+  { q: "Why must some dangerous goods be kept apart?", opts: ["To save space","Because they can react violently together","To make loading faster"], correct: 1 },
+  { q: "Dangerous goods should never be mixed with:", opts: ["Other parcels of the same class","Food, animal feed, or passengers","Items of similar weight"], correct: 1 },
+  { q: "Who should handle dangerous goods segregation?", opts: ["Any experienced driver","Trained, authorised specialists","The customer"], correct: 1 }
+],
+6: [
+  { q: "What must travel with dangerous goods?", opts: ["Only a delivery note","Nothing special","The correct transport documents and emergency information"], correct: 2 },
+  { q: "What standard covers the emergency information system?", opts: ["SANS 10228","SANS 10232","SANS 10229"], correct: 1 },
+  { q: "Why are dangerous goods documents important?", opts: ["For invoicing purposes","So responders know what they are dealing with if something goes wrong","To calculate delivery fees"], correct: 1 }
+],
+7: [
+  { q: "In a dangerous goods incident, what comes first?", opts: ["Saving the parcels","Photographing the scene","Keeping yourself safe and away from the danger"], correct: 2 },
+  { q: "After keeping safe and warning others, what is the third action?", opts: ["Clean up the spill","Call emergency services and tell them it involves dangerous goods","Move your vehicle"], correct: 1 },
+  { q: "Should you try to save the load in a dangerous goods incident?", opts: ["Yes, if you are quick","Only if the fire is small","No, never take risks to save the load"], correct: 2 }
+],
+8: [
+  { q: "Does completing this awareness course allow you to transport dangerous goods?", opts: ["Yes, for small quantities","No, a separate valid certificate from an authorised body is required","Yes, within your province"], correct: 1 },
+  { q: "Carrying dangerous goods without the proper certificate is:", opts: ["Acceptable if the distance is short","A criminal offence","Only a company policy issue"], correct: 1 },
+  { q: "Under which Act is transporting dangerous goods controlled?", opts: ["Consumer Protection Act","Occupational Health and Safety Act only","National Road Traffic Act 93 of 1996"], correct: 2 }
+],
+9: [
+  { q: "When you spot warning signs and you are not a certified dangerous goods carrier, what should you do?", opts: ["Load it quickly and drive carefully","Stop, do not load, and report","Ask the customer to sign a waiver"], correct: 1 },
+  { q: "Which of these is a warning sign that a parcel may be dangerous goods?", opts: ["A clearly printed address label","A hazard diamond or label on the parcel","A parcel wrapped in brown paper"], correct: 1 },
+  { q: "A customer offers extra money to carry an undeclared chemical drum. What do you do?", opts: ["Take it since the pay is good","Take it but drive carefully","Refuse and report it"], correct: 2 }
+]
+};
+
+/* ============================================================
+   ASSESSMENT - MCQ answer keys (obfuscated via base64)
+   ============================================================ */
+const MCQ_QUESTIONS = [
+  { q: "What are dangerous goods?", opts: ["Only explosives and petrol","Anything in a large parcel","Substances that can harm people, property, or the environment if mishandled"] },
+  { q: "What does an orange hazard diamond indicate?", opts: ["Corrosive","Explosive","Toxic"] },
+  { q: "What does a red hazard diamond usually indicate?", opts: ["Radioactive","Flammable","Oxidising"] },
+  { q: "A vehicle's hazard marking should:", opts: ["Stay on permanently","Match the goods actually being carried","Be as small as possible"] },
+  { q: "You find a package that is leaking and smells strong. What should you do?", opts: ["Wipe it clean and carry on","Move it to the back of the van","Do not handle it; keep clear and report it"] },
+  { q: "Why must some dangerous goods be kept apart?", opts: ["To save space","To make loading faster","Because they can react violently together"] },
+  { q: "Dangerous goods must travel with:", opts: ["Nothing special","The correct transport documents and emergency information","Only a delivery note"] },
+  { q: "In a dangerous goods incident, what comes first?", opts: ["Keeping yourself safe and away from the danger","Saving the parcels","Photographing the scene"] },
+  { q: "Who may transport dangerous goods in South Africa?", opts: ["Anyone with a driving licence","Anyone who has done an awareness course","Only a driver with a valid dangerous goods certificate from an authorised body"] },
+  { q: "A customer offers extra money to carry an undeclared drum of chemicals. What should you do?", opts: ["Take it since the pay is good","Take it but drive carefully","Refuse and report it"] }
+];
+
+// Answer verification - keys stored as pre-computed base64
+// Indices: [2,1,1,1,2,2,1,0,2,2]
+const MCQ_KEYS_ENC = ["MDoy","MTox","Mjox","Mzox","NDoy","NToy","Njox","Nzow","ODoy","OToy"];
+
+function checkMCQ(qIdx, selectedIdx) {
+  return btoa(qIdx + ":" + selectedIdx) === MCQ_KEYS_ENC[qIdx];
+}
+
+const SA_QUESTIONS = [
+  { q: "Name three of the nine hazard classes and what each one warns about.", criteria: "Award one mark per correct class with its danger, up to three. Acceptable: explosives, gases, flammable liquids, flammable solids, oxidisers, toxic, radioactive, corrosives, miscellaneous (lithium batteries)." },
+  { q: "You are handed a parcel that is leaking and gives off a strong smell. What do you do?", criteria: "Award marks for: do not handle it, keep clear, do not breathe the fumes, and report it. Full marks require not handling it and reporting." },
+  { q: "List, in order, the first three things you should do in a dangerous goods incident.", criteria: "Award marks for the correct order: keep yourself safe first, warn others and keep them back, then call emergency services and tell them it involves dangerous goods. The order matters." },
+  { q: "Who is allowed to transport dangerous goods in South Africa?", criteria: "Award full marks for: only a driver holding a valid dangerous goods certificate from an authorised body, with a compliant vehicle and operator. Completing this awareness course does not allow it." },
+  { q: "A customer offers you extra money to carry an undeclared drum of chemicals. What do you do, and why?", criteria: "Award marks for: refuse the load, because carrying dangerous goods without the proper certificate and requirements is unlawful and unsafe, and report it. No payment changes the law." }
+];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const STORAGE_KEY = "mkg_courier_hazmat_state";
+const defaultState = {
+  accessGranted: false,
+  accessCodeUsed: null,
+  learner: null,
+  completedSessions: [],
+  finalResult: null
+};
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return structuredClone(defaultState);
+    return Object.assign(structuredClone(defaultState), JSON.parse(raw));
+  } catch(e) { return structuredClone(defaultState); }
+}
+function saveState(s) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(s)); } catch(e) {}
+}
+let state = loadState();
+
+function showView(id) {
+  document.querySelectorAll(".view").forEach(v => v.classList.remove("is-active"));
+  const next = document.getElementById(id);
+  if (next) { next.classList.add("is-active"); window.scrollTo({ top: 0, behavior: "smooth" }); }
+}
+
+function route() {
+  if (!state.accessGranted) { showView("view-access"); return; }
+  if (!state.learner)        { showView("view-registration"); return; }
+  showView("view-dashboard");
+  renderDashboard();
+}
+
+/* Access gate */
+function fetchWithTimeout(url, ms) {
+  return new Promise((resolve, reject) => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => { ctrl.abort(); reject(new Error("timeout")); }, ms);
+    fetch(url, { method: "GET", signal: ctrl.signal })
+      .then(r => { clearTimeout(timer); resolve(r); })
+      .catch(err => { clearTimeout(timer); reject(err); });
+  });
+}
+async function validateCodeAgainstSheet(code) {
+  const url = APPS_SCRIPT_URL + "?code=" + encodeURIComponent(code) + "&course=" + encodeURIComponent(COURSE_KEY) + "&t=" + Date.now();
+  const res = await fetchWithTimeout(url, APPS_SCRIPT_TIMEOUT_MS);
+  if (!res.ok) throw new Error("http " + res.status);
+  return await res.json();
+}
+function setCodeStatus(msg, isError) {
+  const field = document.getElementById("codeField");
+  const status = document.getElementById("codeStatus");
+  const errorEl = document.getElementById("codeError");
+  if (isError) {
+    field.classList.add("field--error");
+    errorEl.textContent = msg;
+    status.classList.remove("is-visible"); status.textContent = "";
+  } else {
+    field.classList.remove("field--error");
+    status.textContent = msg || "";
+    if (msg) status.classList.add("is-visible"); else status.classList.remove("is-visible");
+  }
+}
+function wireAccessGate() {
+  const input = document.getElementById("codeInput");
+  const submit = document.getElementById("codeSubmit");
+  async function attempt() {
+    const code = input.value.trim().toUpperCase();
+    if (!code) { setCodeStatus("Enter the code from your purchase email.", true); input.focus(); return; }
+    submit.disabled = true;
+    submit.innerHTML = '<span class="spinner" aria-hidden="true"></span> Checking...';
+    setCodeStatus("Checking your code with MK Global.", false);
+    let granted = false, usedCode = null;
+    try {
+      const data = await validateCodeAgainstSheet(code);
+      if (data && data.ok === true) { granted = true; usedCode = code; }
+      else if (code === FALLBACK_ACCESS_CODE) { granted = true; usedCode = code; }
+      else {
+        const reason = (data && data.status) || "invalid";
+        let msg = "That code is not recognised.";
+        if (reason === "used") msg = "That code has already been used.";
+        if (reason === "wrongCourse") msg = "That code is for a different MK Global course.";
+        setCodeStatus(msg, true);
+      }
+    } catch(err) {
+      if (code === FALLBACK_ACCESS_CODE) { granted = true; usedCode = code; }
+      else { setCodeStatus("We could not reach the validation service. Try again, or use your fallback code if you were given one.", true); }
+    }
+    submit.disabled = false;
+    submit.textContent = "Unlock Course";
+    if (granted) {
+      state.accessGranted = true; state.accessCodeUsed = usedCode; saveState(state);
+      setCodeStatus("Code accepted.", false);
+      showView("view-registration");
+    } else { input.focus(); input.select(); }
+  }
+  submit.addEventListener("click", attempt);
+  input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); attempt(); } });
+}
+
+/* Registration */
+function wireRegistration() {
+  const form = document.getElementById("regForm");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const fields = {
+      regName:  { el: document.getElementById("regName"),  wrap: document.getElementById("regNameField"),  validate: v => v.trim().length >= 2 },
+      regEmail: { el: document.getElementById("regEmail"), wrap: document.getElementById("regEmailField"), validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) }
+    };
+    let allValid = true;
+    Object.values(fields).forEach(f => {
+      const ok = f.validate(f.el.value);
+      f.wrap.classList.toggle("field--error", !ok);
+      if (!ok) allValid = false;
+    });
+    if (!allValid) return;
+    state.learner = {
+      name: fields.regName.el.value.trim(),
+      email: fields.regEmail.el.value.trim(),
+      company: document.getElementById("regCompany").value.trim(),
+      enrolledAt: new Date().toISOString()
+    };
+    saveState(state);
+    renderDashboard();
+    showView("view-dashboard");
+  });
+}
+
+/* Dashboard */
+function renderDashboard() {
+  if (!state.learner) return;
+  const greeting = document.getElementById("dashGreeting");
+  const firstName = state.learner.name.split(" ")[0];
+  greeting.textContent = "Welcome, " + firstName + ". Work through the sessions in order. Your progress is saved on this device automatically.";
+  const list = document.getElementById("lessonList");
+  list.innerHTML = "";
+  let currentId = null;
+  for (let i = 0; i < SESSIONS.length; i++) {
+    const s = SESSIONS[i];
+    const prevDone = i === 0 || state.completedSessions.includes(SESSIONS[i-1].id);
+    if (prevDone && !state.completedSessions.includes(s.id)) { currentId = s.id; break; }
+  }
+  SESSIONS.forEach((session, idx) => {
+    const isDone = state.completedSessions.includes(session.id);
+    const isUnlocked = idx === 0 || state.completedSessions.includes(SESSIONS[idx-1].id);
+    const isCurrent = session.id === currentId;
+    const li = document.createElement("li");
+    li.className = "lesson-list__item";
+    if (isDone) li.classList.add("lesson-list__item--done");
+    if (!isUnlocked) li.classList.add("lesson-list__item--locked");
+    if (isUnlocked) li.classList.add("lesson-list__item--clickable");
+    if (isCurrent) li.classList.add("lesson-list__item--current");
+    let statusHtml;
+    if (isDone) statusHtml = "Complete &#10003;";
+    else if (isCurrent) statusHtml = "Start &rsaquo;";
+    else if (isUnlocked) statusHtml = "Open";
+    else statusHtml = '<span class="lock-icon" aria-hidden="true"></span> Locked';
+    const numContent = isDone ? "&#10003;" : session.id;
+    li.innerHTML =
+      '<div class="lesson-num" aria-hidden="true">' + numContent + '</div>' +
+      '<div class="lesson-info">' +
+      '  <div class="lesson-info__title">Session ' + session.id + ': ' + session.title + '</div>' +
+      '  <div class="lesson-info__meta">About ' + session.minutes + ' minutes</div>' +
+      '</div>' +
+      '<div class="lesson-status">' + statusHtml + '</div>';
+    if (isUnlocked) {
+      li.setAttribute("tabindex", "0");
+      li.setAttribute("role", "button");
+      li.setAttribute("aria-label", (isDone ? "Review " : "Open ") + "Session " + session.id + ": " + session.title);
+      li.addEventListener("click", () => openSession(session.id));
+      li.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openSession(session.id); } });
+    } else li.setAttribute("aria-disabled", "true");
+    list.appendChild(li);
+  });
+  const allDone = SESSIONS.every(s => state.completedSessions.includes(s.id));
+  const card = document.getElementById("assessmentCard");
+  card.classList.toggle("assessment-card--unlocked", allDone);
+  card.classList.toggle("assessment-card--locked", !allDone);
+  const badge = document.getElementById("assessmentBadge");
+  const meta = document.getElementById("assessmentMeta");
+  const action = document.getElementById("assessmentAction");
+  if (allDone) {
+    badge.innerHTML = "&#9733;";
+    meta.textContent = "15 questions, 80% pass mark. Pass to earn your Certificate of Training Attended.";
+    action.innerHTML = "Start &rsaquo;";
+    card.setAttribute("tabindex", "0"); card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "Start the final assessment");
+  } else {
+    const remaining = SESSIONS.length - state.completedSessions.length;
+    badge.innerHTML = "&#9734;";
+    meta.textContent = "15 questions, 80% pass mark. " + remaining + " session" + (remaining === 1 ? "" : "s") + " left to unlock.";
+    action.innerHTML = '<span class="lock-icon" aria-hidden="true"></span> Locked';
+    card.setAttribute("tabindex", "-1"); card.removeAttribute("role");
+  }
+  const done = state.completedSessions.length;
+  const pct = Math.round((done / SESSIONS.length) * 100);
+  document.getElementById("progressText").textContent = done + " of " + SESSIONS.length + " sessions complete";
+  document.getElementById("progressPercent").textContent = pct + "%";
+  const fill = document.getElementById("progressFill");
+  fill.style.width = pct + "%";
+  fill.setAttribute("aria-valuenow", String(done));
+  fill.classList.toggle("progress__fill--complete", done === SESSIONS.length);
+  document.getElementById("headerProgress").textContent = done + " / " + SESSIONS.length + " sessions";
+}
+
+/* Session view */
+let currentSessionId = null;
+function renderSessionBody(id) {
+  const c = SESSION_CONTENT[id];
+  const body = document.getElementById("lessonBody");
+  if (!c) { body.innerHTML = "<p>Session content coming soon.</p>"; return; }
+  let html = "";
+  html += '<p class="lead">' + c.intro + '</p>';
+  html += '<h2>What you will learn</h2><ul class="outcomes">';
+  c.outcomes.forEach(o => { html += '<li>' + o + '</li>'; });
+  html += '</ul>';
+  c.sections.forEach(s => { html += '<h2>' + s.h + '</h2>' + s.body; });
+  if (c.notes) {
+    html += '<h2>My notes</h2><div class="sa-field"><textarea placeholder="' + c.notes.replace(/"/g, '&quot;') + '"></textarea></div>';
+  }
+  html += '<div class="callout callout--success"><span class="callout__title">Key takeaway</span>' + c.takeaway + '</div>';
+  // Knowledge check
+  html += '<div id="kc-block-' + id + '" style="' + (state.completedSessions.includes(id) ? '' : 'display:none') + '">';
+  html += '<h2>Knowledge Check</h2><p>Answer all three questions correctly to complete this session.</p>';
+  html += '<div id="kc-container-' + id + '"></div>';
+  html += '</div>';
+  // Complete button (shows knowledge check if not already done)
+  if (!state.completedSessions.includes(id)) {
+    html += '<div id="complete-btn-wrap-' + id + '" style="margin-top:var(--space-5)"><button class="btn btn--gold btn--full" id="completeBtn-' + id + '">I have finished reading - take the knowledge check</button></div>';
+  }
+  body.innerHTML = html;
+  // Wire complete button
+  const btn = document.getElementById("completeBtn-" + id);
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const kcBlock = document.getElementById("kc-block-" + id);
+      if (kcBlock) { kcBlock.style.display = "block"; kcBlock.scrollIntoView({ behavior: "smooth" }); }
+      btn.parentElement.style.display = "none";
+      renderKnowledgeCheck(id);
+    });
+  }
+  // If already completed, render KC as passed
+  if (state.completedSessions.includes(id)) {
+    renderKnowledgeCheck(id, true);
+  }
+}
+
+function renderKnowledgeCheck(id, alreadyPassed) {
+  const container = document.getElementById("kc-container-" + id);
+  if (!container) return;
+  const checks = KNOWLEDGE_CHECKS[id];
+  if (!checks) return;
+  if (alreadyPassed) {
+    container.innerHTML = '<div class="callout callout--success"><span class="callout__title">Knowledge check passed</span>You have already completed this session.</div>';
+    return;
+  }
+  let html = "";
+  checks.forEach((ck, qi) => {
+    html += '<div class="kc-question" id="kc-q-' + id + '-' + qi + '">';
+    html += '<div class="kc-question__text">' + (qi+1) + '. ' + ck.q + '</div>';
+    ck.opts.forEach((opt, oi) => {
+      html += '<button class="mcq-option" data-sid="' + id + '" data-qi="' + qi + '" data-oi="' + oi + '">' + opt + '</button>';
+    });
+    html += '</div>';
+  });
+  html += '<div id="kc-result-' + id + '" style="margin-top:var(--space-4)"></div>';
+  container.innerHTML = html;
+  const kcState = { answers: {}, locked: {} };
+  container.querySelectorAll(".mcq-option").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const sid = parseInt(btn.dataset.sid);
+      const qi = parseInt(btn.dataset.qi);
+      const oi = parseInt(btn.dataset.oi);
+      if (kcState.locked[qi]) return;
+      kcState.answers[qi] = oi;
+      // Highlight selected
+      container.querySelectorAll('[data-sid="' + sid + '"][data-qi="' + qi + '"]').forEach(b => b.classList.remove("mcq-option--selected"));
+      btn.classList.add("mcq-option--selected");
+      // Check if all answered
+      if (Object.keys(kcState.answers).length === checks.length) {
+        let allCorrect = true;
+        checks.forEach((ck, i) => {
+          kcState.locked[i] = true;
+          const selected = kcState.answers[i];
+          container.querySelectorAll('[data-sid="' + sid + '"][data-qi="' + i + '"]').forEach(b => {
+            b.disabled = true;
+            const boi = parseInt(b.dataset.oi);
+            if (boi === ck.correct) b.classList.add("mcq-option--correct");
+            if (boi === selected && boi !== ck.correct) { b.classList.add("mcq-option--incorrect"); allCorrect = false; }
+          });
+        });
+        const resultDiv = document.getElementById("kc-result-" + id);
+        if (allCorrect) {
+          if (!state.completedSessions.includes(id)) {
+            state.completedSessions.push(id);
+            saveState(state);
+          }
+          resultDiv.innerHTML = '<div class="callout callout--success"><span class="callout__title">All correct!</span>Session complete. Return to the dashboard to continue.</div><button class="btn btn--primary btn--full mt-5" onclick="showView(\'view-dashboard\');renderDashboard();">Back to Dashboard</button>';
+        } else {
+          resultDiv.innerHTML = '<div class="callout callout--warning"><span class="callout__title">Not quite</span>Review the correct answers above and try again.</div><button class="btn btn--secondary btn--full mt-5" onclick="renderKnowledgeCheck(' + id + ')">Try Again</button>';
+        }
+      }
+    });
+  });
+}
+
+function openSession(id) {
+  const session = SESSIONS.find(s => s.id === id);
+  if (!session) return;
+  currentSessionId = id;
+  document.getElementById("lessonEyebrow").textContent = "Session " + session.id + " of " + SESSIONS.length;
+  document.getElementById("lesson-title").textContent = session.title;
+  renderSessionBody(id);
+  showView("view-lesson");
+}
+
+function wireSessionView() {
+  document.getElementById("backToDash").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+/* Dashboard actions */
+function wireDashboardActions() {
+  document.getElementById("resetProgress").addEventListener("click", () => {
+    if (confirm("This will erase your registration and all progress on this device. Are you sure?")) {
+      state = structuredClone(defaultState); saveState(state);
+      currentSessionId = null;
+      document.getElementById("headerProgress").textContent = "";
+      document.getElementById("regForm").reset();
+      document.getElementById("codeInput").value = "";
+      setCodeStatus("", false);
+      showView("view-access");
+    }
+  });
+  const ac = document.getElementById("assessmentCard");
+  function startAssessmentIfUnlocked() {
+    if (!ac.classList.contains("assessment-card--unlocked")) return;
+    const intro = document.getElementById("ass-intro");
+    const running = document.getElementById("ass-running");
+    const result = document.getElementById("ass-result");
+    if (intro) intro.style.display = "block";
+    if (running) running.style.display = "none";
+    if (result) result.style.display = "none";
+    showView("view-assessment");
+  }
+  ac.addEventListener("click", startAssessmentIfUnlocked);
+  ac.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); startAssessmentIfUnlocked(); } });
+}
+
+/* Assessment */
+function wireAssessment() {
+  document.getElementById("backToDashFromAss").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+  document.getElementById("startAssBtn").addEventListener("click", () => {
+    document.getElementById("ass-intro").style.display = "none";
+    document.getElementById("ass-running").style.display = "block";
+    renderAssessment();
+  });
+}
+
+function renderAssessment() {
+  const container = document.getElementById("ass-running");
+  let html = '<h2>Part A: Multiple Choice (10 questions)</h2>';
+  MCQ_QUESTIONS.forEach((mcq, qi) => {
+    html += '<div class="kc-question" id="ass-mcq-' + qi + '">';
+    html += '<div class="kc-question__text">' + (qi+1) + '. ' + mcq.q + '</div>';
+    mcq.opts.forEach((opt, oi) => {
+      html += '<button class="mcq-option" data-qi="' + qi + '" data-oi="' + oi + '">' + String.fromCharCode(65 + oi) + ') ' + opt + '</button>';
+    });
+    html += '</div>';
+  });
+  html += '<h2>Part B: Short Answer (5 questions)</h2><p>Answer in your own words.</p>';
+  SA_QUESTIONS.forEach((sa, si) => {
+    html += '<div class="sa-field" id="ass-sa-' + si + '"><label>' + (11 + si) + '. ' + sa.q + '</label><textarea id="sa-answer-' + si + '" placeholder="Write your answer here..."></textarea><div class="sa-criteria" id="sa-criteria-' + si + '"><strong>Marking criteria:</strong> ' + sa.criteria + '</div></div>';
+  });
+  html += '<button class="btn btn--gold btn--full mt-5" id="submitAssBtn">Submit Assessment</button>';
+  container.innerHTML = html;
+  // MCQ selection
+  const mcqAnswers = {};
+  container.querySelectorAll(".mcq-option").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const qi = parseInt(btn.dataset.qi);
+      const oi = parseInt(btn.dataset.oi);
+      mcqAnswers[qi] = oi;
+      container.querySelectorAll('[data-qi="' + qi + '"]').forEach(b => b.classList.remove("mcq-option--selected"));
+      btn.classList.add("mcq-option--selected");
+    });
+  });
+  // Submit
+  document.getElementById("submitAssBtn").addEventListener("click", () => {
+    if (Object.keys(mcqAnswers).length < MCQ_QUESTIONS.length) {
+      alert("Please answer all 10 multiple choice questions before submitting.");
+      return;
+    }
+    let mcqScore = 0;
+    MCQ_QUESTIONS.forEach((mcq, qi) => {
+      const selected = mcqAnswers[qi];
+      const isCorrect = checkMCQ(qi, selected);
+      container.querySelectorAll('[data-qi="' + qi + '"]').forEach(b => {
+        b.disabled = true;
+        const boi = parseInt(b.dataset.oi);
+        if (checkMCQ(qi, boi)) b.classList.add("mcq-option--correct");
+        if (boi === selected && !checkMCQ(qi, boi)) b.classList.add("mcq-option--incorrect");
+      });
+      if (isCorrect) mcqScore++;
+    });
+    SA_QUESTIONS.forEach((sa, si) => {
+      document.getElementById("sa-criteria-" + si).style.display = "block";
+    });
+    document.getElementById("submitAssBtn").style.display = "none";
+    const passed = mcqScore >= 8;
+    state.finalResult = { mcqScore: mcqScore, total: 10, passed: passed, date: new Date().toISOString() };
+    saveState(state);
+    const resultDiv = document.getElementById("ass-result");
+    resultDiv.style.display = "block";
+    let resultHtml = '<div class="result-box ' + (passed ? 'result-box--pass' : 'result-box--fail') + '">';
+    resultHtml += '<div class="result-score">' + mcqScore + ' / 10</div>';
+    resultHtml += '<p style="font-size:18px;font-weight:bold;margin-top:var(--space-3)">' + (passed ? 'You passed!' : 'Not yet') + '</p>';
+    if (passed) {
+      resultHtml += '<p>You scored ' + mcqScore + ' out of 10 on the multiple choice section. Review the short answer marking criteria above to self-assess your written answers.</p>';
+      resultHtml += '<button class="btn btn--gold btn--full mt-5" onclick="showCertificate()">View Your Certificate</button>';
+    } else {
+      resultHtml += '<p>You scored ' + mcqScore + ' out of 10. You need at least 8 out of 10 to pass. Review the content and try again.</p>';
+      resultHtml += '<button class="btn btn--secondary btn--full mt-5" onclick="showView(\'view-dashboard\');renderDashboard();">Back to Dashboard</button>';
+    }
+    resultHtml += '</div>';
+    resultDiv.innerHTML = resultHtml;
+    resultDiv.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+/* Certificate */
+function showCertificate() {
+  if (!state.learner || !state.finalResult || !state.finalResult.passed) return;
+  const now = new Date();
+  const dateStr = now.toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" });
+  const yy = String(now.getFullYear()).slice(-2);
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const rand = String(Math.floor(10000 + Math.random() * 90000));
+  const certRef = "MKG-" + yy + mm + dd + "-" + rand;
+  document.getElementById("certName").textContent = state.learner.name;
+  document.getElementById("certDate").textContent = dateStr;
+  document.getElementById("certRef").textContent = certRef;
+  document.getElementById("certMessage").textContent = "Well done, " + state.learner.name.split(" ")[0] + ". You have completed the Hazardous Goods and Dangerous Parcel Awareness course.";
+  showView("view-certificate");
+  document.getElementById("downloadCert").onclick = () => generateCertPDF(state.learner.name, dateStr, certRef);
+  document.getElementById("backToDashFromCert").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+function generateCertPDF(name, dateStr, certRef) {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+  const w = doc.internal.pageSize.getWidth();
+  const h = doc.internal.pageSize.getHeight();
+  // Gold border
+  doc.setDrawColor(197, 151, 44);
+  doc.setLineWidth(3);
+  doc.rect(10, 10, w - 20, h - 20);
+  doc.setLineWidth(0.5);
+  doc.rect(14, 14, w - 28, h - 28);
+  // Header
+  doc.setFontSize(14);
+  doc.setTextColor(139, 148, 163);
+  doc.text("MK GLOBAL SA (Pty) Ltd", w / 2, 35, { align: "center" });
+  // Title
+  doc.setFontSize(28);
+  doc.setTextColor(27, 58, 92);
+  doc.text("CERTIFICATE OF TRAINING ATTENDED", w / 2, 55, { align: "center" });
+  // Gold line
+  doc.setDrawColor(197, 151, 44);
+  doc.setLineWidth(1);
+  doc.line(w / 2 - 60, 62, w / 2 + 60, 62);
+  // Body
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("This certifies that", w / 2, 76, { align: "center" });
+  doc.setFontSize(24);
+  doc.setTextColor(27, 58, 92);
+  doc.text(name, w / 2, 89, { align: "center" });
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("has completed the", w / 2, 101, { align: "center" });
+  doc.setFontSize(18);
+  doc.setTextColor(46, 117, 182);
+  doc.text("Hazardous Goods and Dangerous Parcel Awareness", w / 2, 112, { align: "center" });
+  doc.setFontSize(14);
+  doc.setTextColor(58, 66, 81);
+  doc.text("of the Courier Driver Training programme.", w / 2, 123, { align: "center" });
+  // Date and ref
+  doc.setFontSize(11);
+  doc.setTextColor(139, 148, 163);
+  doc.text("Date: " + dateStr + "    |    Certificate Ref: " + certRef, w / 2, 140, { align: "center" });
+  // Awareness disclaimer
+  doc.setFontSize(9);
+  doc.text("This certificate confirms attendance of a hazardous goods awareness programme.", w / 2, 155, { align: "center" });
+  doc.text("It does not authorise the holder to transport dangerous goods.", w / 2, 161, { align: "center" });
+  doc.text("A valid dangerous goods driver certificate from an authorised body is required for that purpose.", w / 2, 167, { align: "center" });
+  doc.text("This is not a formal SAQA qualification and does not replace any licence, permit, or certificate required by law.", w / 2, 173, { align: "center" });
+  // Footer
+  doc.setFontSize(10);
+  doc.setTextColor(27, 58, 92);
+  doc.text("MK Global SA (Pty) Ltd  |  info@mkglobal.co.za", w / 2, 185, { align: "center" });
+  doc.save("MKGlobal_HazardousGoodsAwareness_Certificate.pdf");
+}
+
+/* Action Plan */
+function wireActionPlan() {
+  document.getElementById("backToDashFromAP").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
+}
+
+/* Init */
+document.addEventListener("DOMContentLoaded", () => {
+  wireAccessGate();
+  wireRegistration();
+  wireSessionView();
+  wireDashboardActions();
+  wireAssessment();
+  wireActionPlan();
+  route();
+});
+</script>
+</body>
+</html>
