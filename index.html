@@ -321,6 +321,7 @@ p{margin:0 0 var(--space-4) 0}
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="certificate-template.js"></script>
 <script>
 "use strict";
 
@@ -1067,60 +1068,12 @@ function showCertificate() {
   document.getElementById("backToDashFromCert").addEventListener("click", () => { showView("view-dashboard"); renderDashboard(); });
 }
 
-function generateCertPDF(name, dateStr, certRef) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
-  const w = doc.internal.pageSize.getWidth();
-  const h = doc.internal.pageSize.getHeight();
-  // Gold border
-  doc.setDrawColor(197, 151, 44);
-  doc.setLineWidth(3);
-  doc.rect(10, 10, w - 20, h - 20);
-  doc.setLineWidth(0.5);
-  doc.rect(14, 14, w - 28, h - 28);
-  // Header
-  doc.setFontSize(14);
-  doc.setTextColor(139, 148, 163);
-  doc.text("MK GLOBAL SA (Pty) Ltd", w / 2, 35, { align: "center" });
-  // Title
-  doc.setFontSize(28);
-  doc.setTextColor(27, 58, 92);
-  doc.text("CERTIFICATE OF COMPLETION", w / 2, 55, { align: "center" });
-  // Gold line
-  doc.setDrawColor(197, 151, 44);
-  doc.setLineWidth(1);
-  doc.line(w / 2 - 60, 62, w / 2 + 60, 62);
-  // Body
-  doc.setFontSize(14);
-  doc.setTextColor(58, 66, 81);
-  doc.text("This certifies that", w / 2, 76, { align: "center" });
-  doc.setFontSize(24);
-  doc.setTextColor(27, 58, 92);
-  doc.text(name, w / 2, 89, { align: "center" });
-  doc.setFontSize(14);
-  doc.setTextColor(58, 66, 81);
-  doc.text("has completed the", w / 2, 101, { align: "center" });
-  doc.setFontSize(18);
-  doc.setTextColor(46, 117, 182);
-  doc.text("Hazardous Goods and Dangerous Parcel Awareness", w / 2, 112, { align: "center" });
-  doc.setFontSize(14);
-  doc.setTextColor(58, 66, 81);
-  doc.text("of the Courier Driver Training programme.", w / 2, 123, { align: "center" });
-  // Date and ref
-  doc.setFontSize(11);
-  doc.setTextColor(139, 148, 163);
-  doc.text("Date: " + dateStr + "    |    Certificate Ref: " + certRef, w / 2, 140, { align: "center" });
-  // Awareness disclaimer
-  doc.setFontSize(9);
-  doc.text("This certificate confirms completion of a non-accredited hazardous goods awareness programme.", w / 2, 155, { align: "center" });
-  doc.text("It does not authorise the holder to transport dangerous goods.", w / 2, 161, { align: "center" });
-  doc.text("A valid dangerous goods driver certificate from an authorised body is required for that purpose.", w / 2, 167, { align: "center" });
-  doc.text("This is not a formal SAQA qualification and does not replace any licence, permit, or certificate required by law.", w / 2, 173, { align: "center" });
-  // Footer
-  doc.setFontSize(10);
-  doc.setTextColor(27, 58, 92);
-  doc.text("MK Global SA (Pty) Ltd  |  info@mkglobal.co.za", w / 2, 185, { align: "center" });
-  doc.save("MKGlobal_HazardousGoodsAwareness_Certificate.pdf");
+function generateCertPDF(name,dateStr,certRef){
+  try {
+    if(!window.jspdf)throw new Error('PDF library is not loaded. Please refresh and try again.');
+    const doc=window.MKGCertificate.create(window.jspdf.jsPDF,{name,course:"Hazardous Goods and Dangerous Parcel Awareness",date:dateStr,reference:certRef,award:'Completion',hazmat:true});
+    doc.save("MKGlobal_HazardousGoodsAwareness_Certificate.pdf");
+  }catch(error){alert(error.message);}
 }
 
 /* Action Plan */
